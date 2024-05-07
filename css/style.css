@@ -27,6 +27,30 @@ body {
   width: 100vw;
   height: 100vh;
 }
+#title {
+  font-size: 50px;
+}
+
+#start-button{
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+  height: 100px;
+}
+
+#start{
+  width: 50%;
+  font-size: 30px;
+  border-radius: 5%;
+  background-color: black;
+  
+  
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
