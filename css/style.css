@@ -20,6 +20,12 @@ body {
 }
  
 
+/*
+****************
+Title Screen
+****************
+*/
+
 
 #title-screen{
   padding: 0;
@@ -70,7 +76,11 @@ a{
   background-color: white;
   color: black;
   }
-
+/*
+****************
+Game Screen
+****************
+*/
 
 /******************************************
 /* ADDITIONAL STYLES
