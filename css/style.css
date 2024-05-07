@@ -29,6 +29,7 @@ body {
 }
 #title {
   font-size: 50px;
+  text-shadow: 2px 2px 10px red;
 }
 
 #start-button{
@@ -53,6 +54,13 @@ a{
   text-decoration: none;
   color: white;
 }
+
+#start:hover {
+  background-color: white;
+  }
+  a:hover{
+    color: black;
+  }
 
 /******************************************
 /* ADDITIONAL STYLES
