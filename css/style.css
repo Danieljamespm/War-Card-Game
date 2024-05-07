@@ -87,7 +87,6 @@ Game Screen
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 2px solid black;
   height: 300px;
 }
 
@@ -101,6 +100,19 @@ h1{
 
 h3{
   font-size: 40px;
+}
+
+button{
+  padding: 10px;
+  margin: 3px;
+  box-shadow: 0 0 10px 2px;
+  cursor: pointer;
+  
+}
+
+button:hover{
+  background: black;
+  color: white;
 }
 
 #player1, #player2 {
