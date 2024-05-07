@@ -43,7 +43,7 @@ function drawTwo(){
       }
     })
   }
-// War button to click and runs timeForWar function that deals 
+// War button to click and runs timeForWar function that deals 8 cards (4 to each player) and results the 4th from each player
   document.querySelector('#war').addEventListener('click', timeForWar)
     function timeForWar(){
       document.querySelector('button').classList.remove('hidden')
@@ -82,4 +82,3 @@ function faceCardVal(val){
   }
 }
 
-// 0c71k6lc6us4
