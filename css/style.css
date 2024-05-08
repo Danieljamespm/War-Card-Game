@@ -169,7 +169,7 @@ button:hover{
   color: white;
 }
 
-#player1CardOne, #player2CardOne {
+.playingCards{
   height: 200px;
 }
 /******************************************
