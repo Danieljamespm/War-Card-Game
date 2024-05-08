@@ -8,6 +8,7 @@ fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
       .then(data => {
         console.log(data)
         deckId = data.deck_id
+        
         })
       .catch(err => {
           console.log(`error ${err}`)
@@ -19,10 +20,11 @@ document.querySelector('button').addEventListener('click', drawTwo)
 
 function drawTwo(){
   const url = `https://www.deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`
-
+  
   /* -Fetch 2 cards from the drawTwo url and have them appear in the DOM
     - create 2 variables for each player that takes the value of the cards and runs it as a parameter for the faceCardVal function
     - make conditional to determine if player 1 or player 2 won or if it is WAR and have it appear in the DOM(h3)*/
+  
 
   fetch(url)
     .then(res => res.json())
@@ -32,18 +34,26 @@ function drawTwo(){
       document.querySelector('#player2').src = data.cards[1].image
       let player1Val = faceCardVal(data.cards[0].value)
       let player2Val = faceCardVal(data.cards[1].value)
+      let cardsLeft = data.remaining
       if(player1Val > player2Val){
         document.querySelector('h3').innerText = 'Player 1 Wins'
-      }else if(player1Val < player2Val){
+        }else if(player1Val < player2Val){
         document.querySelector('h3').innerText = 'Player 2 Wins'
       }else{
         document.querySelector('h3').innerText = 'Time For War'
+        document.querySelector('#war').classList.remove('hidden')
         document.querySelector('button').classList.add('hidden') /*In the case of WAR the deal 2 cards button will disappear so it can't
         be clicked on accident*/
        
       }
+      
     })
+    
+    
   }
+  
+
+  
 // War button to click and runs timeForWar function that deals 8 cards (4 to each player) and results the 4th from each player
   document.querySelector('#war').addEventListener('click', timeForWar)
     function timeForWar(){
