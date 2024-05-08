@@ -30,11 +30,12 @@ function drawTwo(){
     .then(res => res.json())
     .then(data => {
       console.log(data)
+      let cardsLeft = data.remaining
+      document.querySelector('#remaining').innerText = `Cards in Deck: ${cardsLeft}`
       document.querySelector('#player1').src = data.cards[0].image
       document.querySelector('#player2').src = data.cards[1].image
       let player1Val = faceCardVal(data.cards[0].value)
       let player2Val = faceCardVal(data.cards[1].value)
-      let cardsLeft = data.remaining
       if(player1Val > player2Val){
         document.querySelector('h3').innerText = 'Player 1 Wins'
         }else if(player1Val < player2Val){
@@ -49,7 +50,7 @@ function drawTwo(){
       
     })
     
-    
+   
   }
   
 
