@@ -68,8 +68,14 @@ function drawTwo(){
       console.log(data)
       let cardsLeft = data.remaining
       document.querySelector('#remaining').innerText = `Cards in Deck: ${cardsLeft}`
-      document.querySelector('#player1').src = data.cards[0,1,2,3].image 
-      document.querySelector('#player2').src = data.cards[4,5,6,7].image 
+      document.querySelector('#player1CardOne').src = data.cards[0].image
+      document.querySelector('#player1CardTwo').src = data.cards[1].image 
+      document.querySelector('#player1CardThree').src = data.cards[2].image 
+      document.querySelector('#player1CardFour').src = data.cards[3].image  
+      document.querySelector('#player2CardOne').src = data.cards[4].image 
+      document.querySelector('#player2CardTwo').src = data.cards[5].image 
+      document.querySelector('#player2CardThree').src = data.cards[6].image 
+      document.querySelector('#player2CardFour').src = data.cards[7].image 
       player1Val = faceCardVal(data.cards[3].value)
       player2Val = faceCardVal(data.cards[7].value)
       if(player1Val > player2Val){
