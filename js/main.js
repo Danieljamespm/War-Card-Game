@@ -31,6 +31,7 @@ function drawTwo(){
     .then(data => {
       console.log(data)
       let cardsLeft = data.remaining
+      let playerPoint = 0
       document.querySelector('#remaining').innerText = `Cards in Deck: ${cardsLeft}`
       document.querySelector('#player1').src = data.cards[0].image
       document.querySelector('#player2').src = data.cards[1].image
@@ -38,8 +39,10 @@ function drawTwo(){
       let player2Val = faceCardVal(data.cards[1].value)
       if(player1Val > player2Val){
         document.querySelector('h3').innerText = 'Player 1 Wins'
+        document.querySelector('.playerOneWins').innerText = `Wins: ${++playerPoint}`
         }else if(player1Val < player2Val){
         document.querySelector('h3').innerText = 'Player 2 Wins'
+        document.querySelector('.playerTwoWins').innerText = `Wins: ${++playerPoint}`
       }else{
         document.querySelector('h3').innerText = 'Time For War'
         document.querySelector('#war').classList.remove('hidden')
