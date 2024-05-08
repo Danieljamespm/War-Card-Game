@@ -106,38 +106,49 @@ h1{
   text-shadow: 2px 10px 10px black;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
+  margin: 20px;
 }
 
 h2{
   font-size: 50px;
+  text-align: center;
 
 }
 
-/* h2,h4{
-  width: 400px;
-} */
+#firsPlayer{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: row;
+}
 
 h3{
   font-size: 60px;
   color: rgb(84, 12, 12);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
+  margin: 20px;
 }
 
 h4{
   font-size: 30px;
+  text-align: center;
 }
 
 #remaining{
   font-size: 20px;
+  text-align: center;
 }
 
+h5{
+  
+}
 
-/* #player1, #player2{
-  width: 200px;
-} */
+img{
+  width: auto;
+}
 
-button{
+  button{
   padding: 10px;
   margin: 3px;
   box-shadow: 0 0 10px 2px;
