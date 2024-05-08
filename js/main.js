@@ -25,8 +25,8 @@ function drawTwo(){
   /* -Fetch 2 cards from the drawTwo url and have them appear in the DOM
     - create 2 variables for each player that takes the value of the cards and runs it as a parameter for the faceCardVal function
     - make conditional to determine if player 1 or player 2 won or if it is WAR and have it appear in the DOM(h3)*/
-  
-
+   
+    
   fetch(url)
     .then(res => res.json())
     .then(data => {
@@ -53,7 +53,8 @@ function drawTwo(){
       
     })
     
-   
+    
+    
   }
   
 
@@ -87,7 +88,9 @@ function drawTwo(){
       }
       document.querySelector('button').classList.remove('hidden')
       document.querySelector('#war').classList.add('hidden')
+      
     })
+   
     }
 
 // function that takes the face card strings and converts them to numbers and an else that makes sure otherwise to always be returning a number
