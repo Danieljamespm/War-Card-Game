@@ -99,12 +99,34 @@ h1{
   -webkit-text-stroke-color: black;
 }
 
+h2{
+  font-size: 50px;
+
+}
+
+/* h2,h4{
+  width: 400px;
+} */
+
 h3{
   font-size: 60px;
   color: rgb(84, 12, 12);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
+
+h4{
+  font-size: 30px;
+}
+
+h5{
+  font-size: 20px;
+}
+
+
+/* #player1, #player2{
+  width: 200px;
+} */
 
 button{
   padding: 10px;
