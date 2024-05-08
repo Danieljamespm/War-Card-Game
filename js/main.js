@@ -1,6 +1,7 @@
 // Get the deck_id on page load and store it into a variable called deckId
 
 let deckId = ''
+document.querySelector('#war').classList.add('hidden')
 
 fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
       .then(res => res.json()) // parse response as JSON
