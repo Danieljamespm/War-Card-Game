@@ -3,6 +3,7 @@ let playerPoint1 = 0
 let playerPoint2 = 0
 let deckId = ''
 document.querySelector('#war').classList.add('hidden')
+document.querySelector('.warCards').classList.add('hidden')
 
 fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
       .then(res => res.json()) // parse response as JSON
