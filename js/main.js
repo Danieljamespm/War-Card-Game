@@ -3,7 +3,7 @@ let playerPoint1 = 0
 let playerPoint2 = 0
 let deckId = ''
 document.querySelector('#war').classList.add('hidden')
-document.querySelector('.warCards').classList.add('hidden')
+
 
 fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
       .then(res => res.json()) // parse response as JSON
@@ -22,7 +22,7 @@ document.querySelector('button').addEventListener('click', drawTwo)
 
 function drawTwo(){
   const url = `https://www.deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`
-  
+  // document.querySelectorAll('.warCards').classList.add('hidden')
   /* -Fetch 2 cards from the drawTwo url and have them appear in the DOM
     - create 2 variables for each player that takes the value of the cards and runs it as a parameter for the faceCardVal function
     - make conditional to determine if player 1 or player 2 won or if it is WAR and have it appear in the DOM(h3)*/
