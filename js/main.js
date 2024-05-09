@@ -22,7 +22,10 @@ document.querySelector('button').addEventListener('click', drawTwo)
 
 function drawTwo(){
   const url = `https://www.deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`
-  // document.querySelectorAll('.warCards').classList.add('hidden')
+  const hiddenCards =document.querySelectorAll('.warCards')
+  hiddenCards.forEach(cards => {
+    cards.classList.add('hidden')
+  })
   /* -Fetch 2 cards from the drawTwo url and have them appear in the DOM
     - create 2 variables for each player that takes the value of the cards and runs it as a parameter for the faceCardVal function
     - make conditional to determine if player 1 or player 2 won or if it is WAR and have it appear in the DOM(h3)*/
@@ -63,6 +66,10 @@ function drawTwo(){
 // War button to click and runs timeForWar function that deals 8 cards (4 to each player) and results the 4th from each player
   document.querySelector('#war').addEventListener('click', timeForWar)
     function timeForWar(){
+      const hiddenCards =document.querySelectorAll('.warCards')
+  hiddenCards.forEach(cards => {
+    cards.classList.remove('hidden')
+  })
       document.querySelector('button').classList.remove('hidden')
     fetch(`https://www.deckofcardsapi.com/api/deck/${deckId}/draw/?count=8`)
     .then(res => res.json())
