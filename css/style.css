@@ -39,7 +39,7 @@ Title Screen
   height: 100vh;
 }
 #title {
-  font-size: 124px;
+  font-size: 100px;
   text-shadow: 2px 10px 10px black;
   color: rgb(84, 12, 12);
   -webkit-text-stroke-width: 1px;
@@ -51,8 +51,8 @@ Title Screen
 #start-button{
   display: flex;
   justify-content: center;
-  padding-top: 10%;
-  height: 144px;
+  padding-top: 13%;
+  height: 148px;
 }
 
 #start{
@@ -91,27 +91,33 @@ Game Screen
 ****************
 */
 
+#game-screen{
+  height: 200px;
+}
+
+
 #player-action{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: auto;
+  
   
 }
 
 h1{
-  font-size: 120px;
+  font-size: 80px;
   color: rgb(84, 12, 12);
   text-shadow: 2px 10px 10px black;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  margin: 20px;
+  margin: 0px 0px 10px 0;
 }
 
 h2{
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
+  margin: 10px;
 
 }
 
@@ -123,21 +129,27 @@ h2{
 }
 
 h3{
-  font-size: 60px;
+  font-size: 30px;
   color: rgb(84, 12, 12);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  margin: 20px;
+  margin: 10px;
 }
 
 h4{
-  font-size: 30px;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+
+h5{
   text-align: center;
 }
 
 #remaining{
   font-size: 20px;
   text-align: center;
+  margin: 5px 0;
 }
 
 #playerOneCards, #playerTwoCards{
@@ -156,7 +168,7 @@ h4{
 }
 
 .game-button{
-  padding: 40px;
+  padding: 13px;
 }
 
 #war{
@@ -170,7 +182,7 @@ button:hover{
 }
 
 .playingCards{
-  height: 200px;
+  height: 100px;
 }
 /******************************************
 /* ADDITIONAL STYLES
