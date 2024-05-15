@@ -1,6 +1,8 @@
 // Get the deck_id on page load and store it into a variable called deckId
 let playerPoint1 = 0
 let playerPoint2 = 0
+let cardsWonPlayer1 = 0
+let cardsWonPlayer2 = 0
 let deckId = ''
 
 document.querySelector('#war').classList.add('hidden')
@@ -45,11 +47,11 @@ function drawTwo(){
       if(player1Val > player2Val){
         document.querySelector('h3').innerText = 'Player 1 Wins'
         document.querySelector('.playerOneWins').innerText = `Wins: ${++playerPoint1}`
-        document.querySelector('.cards-WonPlayer1').innerText = `Cards Won: ${playerPoint1+=1}`
+        document.querySelector('.cards-WonPlayer1').innerText = `Cards Won: ${cardsWonPlayer1+=2}`
         }else if(player1Val < player2Val){
         document.querySelector('h3').innerText = 'Player 2 Wins'
         document.querySelector('.playerTwoWins').innerText = `Wins: ${++playerPoint2}`
-        document.querySelector('.cards-WonPlayer2').innerText = `Cards Won: ${playerPoint2+=1}`
+        document.querySelector('.cards-WonPlayer2').innerText = `Cards Won: ${cardsWonPlayer2+=2}`
       }else{
         document.querySelector('h3').innerText = 'Time For War'
         document.querySelector('#war').classList.remove('hidden')
@@ -92,12 +94,12 @@ function drawTwo(){
       player2Val = faceCardVal(data.cards[7].value)
       if(player1Val > player2Val){
         document.querySelector('h3').innerText = 'Player 1 Wins the WAR'
-        document.querySelector('.playerOneWins').innerText = `Wins: ${playerPoint1+=4}`
-        document.querySelector('.cards-WonPlayer1').innerText = `Wins: ${playerPoint1+=4}`
+        document.querySelector('.playerOneWins').innerText = `Wins: ${++playerPoint1}`
+        document.querySelector('.cards-WonPlayer1').innerText = `Cards Won: ${cardsWonPlayer1+=4}`
         }else if(player1Val < player2Val){
         document.querySelector('h3').innerText = 'Player 2 Wins the WAR'
-        document.querySelector('.playerTwoWins').innerText = `Wins: ${playerPoint2+=4}`
-        document.querySelector('.cards-WonPlayer2').innerText = `Wins: ${playerPoint2+=4}`
+        document.querySelector('.playerTwoWins').innerText = `Wins: ${++playerPoint2}`
+        document.querySelector('.cards-WonPlayer2').innerText = `Cards Won: ${cardsWonPlayer2+=4}`
       }
       document.querySelector('button').classList.remove('hidden')
       document.querySelector('#war').classList.add('hidden')
