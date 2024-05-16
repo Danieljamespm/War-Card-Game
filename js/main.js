@@ -63,20 +63,22 @@ function drawTwo(){
        
       }
       
-    })
-    const gameOver = document.querySelectorAll('div')
+      const gameOver = document.querySelectorAll('div')
     
-    if(cardsLeft===0 && cardsWonPlayer1 > cardsWonPlayer2){
-      gameOver.forEach(element => {
-        element.style.display = 'none'
-        })
-      document.querySelector('#endGame').innerText = 'PLAYER 1 WINS'
-    }else if(cardsLeft===0 && cardsWonPlayer2 > cardsWonPlayer1){
-      gameOver.forEach(element => {
-        element.style.display = 'none'
-        })
-      document.querySelector('#endGame').innerText = 'PLAYER 2 WINS'
-    }
+      if(cardsLeft===0 && cardsWonPlayer1 > cardsWonPlayer2){
+        gameOver.forEach(element => {
+          element.style.display = 'none'
+          })
+        document.querySelector('#endGame').innerText = 'PLAYER 1 WINS'
+      }else if(cardsLeft===0 && cardsWonPlayer2 > cardsWonPlayer1){
+        gameOver.forEach(element => {
+          element.style.display = 'none'
+          })
+        document.querySelector('#endGame').innerText = 'PLAYER 2 WINS'
+      }
+
+    })
+    
     
   }
   
