@@ -64,8 +64,19 @@ function drawTwo(){
       }
       
     })
+    const gameOver = document.querySelectorAll('div')
     
-    
+    if(cardsLeft===0 && cardsWonPlayer1 > cardsWonPlayer2){
+      gameOver.forEach(element => {
+        element.style.display = 'none'
+        })
+      document.querySelector('#endGame').innerText = 'PLAYER 1 WINS'
+    }else if(cardsLeft===0 && cardsWonPlayer2 > cardsWonPlayer1){
+      gameOver.forEach(element => {
+        element.style.display = 'none'
+        })
+      document.querySelector('#endGame').innerText = 'PLAYER 2 WINS'
+    }
     
   }
   
@@ -98,11 +109,11 @@ function drawTwo(){
       if(player1Val > player2Val){
         document.querySelector('h3').innerText = 'Player 1 Wins the WAR'
         document.querySelector('.playerOneWins').innerText = `Wins: ${++playerPoint1}`
-        document.querySelector('.cards-WonPlayer1').innerText = `Cards Won: ${cardsWonPlayer1+=4}`
+        document.querySelector('.cards-WonPlayer1').innerText = `Cards Won: ${cardsWonPlayer1+=8}`
         }else if(player1Val < player2Val){
         document.querySelector('h3').innerText = 'Player 2 Wins the WAR'
         document.querySelector('.playerTwoWins').innerText = `Wins: ${++playerPoint2}`
-        document.querySelector('.cards-WonPlayer2').innerText = `Cards Won: ${cardsWonPlayer2+=4}`
+        document.querySelector('.cards-WonPlayer2').innerText = `Cards Won: ${cardsWonPlayer2+=8}`
       }
       document.querySelector('button').classList.remove('hidden')
       document.querySelector('#war').classList.add('hidden')
