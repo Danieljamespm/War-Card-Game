@@ -6,8 +6,12 @@ let cardsWonPlayer2 = 0
 let deckId = ''
 
 document.querySelector('#war').classList.add('hidden')
+document.querySelector('.refresh-button').classList.add('hidden')
 
 
+function refreshPage(){
+  window.location.reload()
+}
 
 
 
@@ -63,6 +67,8 @@ function drawTwo(){
        
       }
       
+     
+      
       const gameOver = document.querySelectorAll('div')
     
       if(cardsLeft===0 && cardsWonPlayer1 > cardsWonPlayer2){
@@ -70,11 +76,15 @@ function drawTwo(){
           element.style.display = 'none'
           })
         document.querySelector('#endGame').innerText = 'PLAYER 1 WINS'
+        document.querySelector('.refresh-button').classList.remove('hidden')
+        
       }else if(cardsLeft===0 && cardsWonPlayer2 > cardsWonPlayer1){
         gameOver.forEach(element => {
           element.style.display = 'none'
           })
         document.querySelector('#endGame').innerText = 'PLAYER 2 WINS'
+        document.querySelector('.refresh-button').classList.remove('hidden')
+        
       }
 
     })
